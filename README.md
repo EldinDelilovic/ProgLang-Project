@@ -16,4 +16,6 @@ FEATURES:
   -See conversion history:
     After every conversion, the application saves the conversion details to a JSON file, this file stores information such as the base currency, the target currency, the conversion rate, amount and the converted value.
 
+  -Error handling:
+    The application/project handles errors such as invalid currency codes, missing exchange rate data and calculation issues. Users recieve prompts which lead to correct inputs while ensuring smooth user experience.
 
