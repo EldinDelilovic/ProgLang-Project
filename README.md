@@ -22,7 +22,20 @@ The main goal of the application is to allow users to convert certain amounts fr
 Allows users to input an amount in one currency and receive the converted amount in the selected currency. Additionally, users have access to an easy, user-friendly menu with options to view conversion history and explore 24-hour currency predictions.
     
 ### Pre-set values:
-Allows users to convert currencies using pre-set exchange rates for five different currencies (EUR, USD, GBP, BAM, CHF), enabling the program to function offline. The pre-set values are closely aligned with real time values to ensure the user recives more precise results.
+Allows users to convert currencies using pre-set exchange rates for five different currencies (EUR, USD, GBP, BAM, CHF), enabling the program to function offline. The pre-set values are closely aligned with real time values to ensure the user recives more precise results. 
+Example for euro (EUR) JSON file:
+```json
+{
+    "base_currency": "EUR",
+    "exchange_rates": {
+        "USD": 1.1,
+        "GBP": 0.85,
+        "BAM": 1.95,
+        "CHF": 1.08
+    },
+    "last_updated": "2024-11-13T20:00:00+01:00"
+}
+```
 
 ### Currency prediction:
 The programm generates random predictions for currency values over the next 24 hours, allowing users to explore potential fluctuations in exchange rates within a 24-hour timeframe. 
