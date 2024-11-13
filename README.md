@@ -23,7 +23,8 @@ Allows users to input an amount in one currency and receive the converted amount
     
 ### Pre-set values:
 Allows users to convert currencies using pre-set exchange rates for five different currencies (EUR, USD, GBP, BAM, CHF), enabling the program to function offline. The pre-set values are closely aligned with real time values to ensure the user recives more precise results. 
-Example for euro (EUR) JSON file:
+
+Sample for euro (EUR) JSON file:
 ```json
 {
     "base_currency": "EUR",
