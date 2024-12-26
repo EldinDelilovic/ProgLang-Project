@@ -7,11 +7,15 @@ A currency converter application in three different languages (Python, JavaScrip
 - [About the Application](#about-the-application)
 - [Features](#features)
   - [Single Currency Conversion](#single-currency-conversion)
-  - [Pre-set Values](#pre-set-values)
-  - [Currency Prediction](#currency-prediction)
+  - [Pre-set Exchange Rates](#pre-set-exchange-rates)
+  - [Hourly Predictions](#hourly-predictions)
+  - [Daily Predictions](#daily-predictions)
+  - [Popular Conversions](#popular-conversions)
   - [Conversion History](#conversion-history)
+  - [Clear History](#clear-history)
   - [Error Handling](#error-handling)
-  - [Menu Example](#menu-example)
+  - [Help Documentation](#help-documentation)
+- [How to Use](#how-to-use)
     
 ## ABOUT THE APPLICATION:
 The main goal of the application is to allow users to convert certain amounts from one currency to another, using pre-set values, for 5 different currencies (EUR, USD, GBP, BAM, CHF). Users can select currencies and enter amounts to get instant conversion results. Additionaly, the programm alows users to see transaction histoy and see predictions for potential fluctuations, making it a tool with many flexibilities in different situations.
@@ -26,20 +30,21 @@ Allows users to convert currencies using pre-set exchange rates for five differe
 
 Sample for euro (EUR) JSON file:
 ```json
-{
-    "base_currency": "EUR",
-    "exchange_rates": {
-        "USD": 1.1,
-        "GBP": 0.85,
-        "BAM": 1.95,
-        "CHF": 1.08
-    },
-    "last_updated": "2024-11-13T20:00:00+01:00"
-}
+ "USD": {
+    "BAM": 1.89,
+    "EUR": 0.92,
+    "CHF": 0.89,
+    "AUD": 1.53
+  },
 ```
+### Hourly Predictions
+The application generates hourly exchange rate predictions for selected currencies over 1, 3, or 6 hours. It calculates potential trends and variations to give users an idea of short-term fluctuations.
 
-### Currency prediction:
-The programm generates random predictions for currency values over the next 24 hours, allowing users to explore potential fluctuations in exchange rates within a 24-hour timeframe. 
+### Daily Predictions
+Explore potential exchange rate trends for the next 24 hours. These predictions are based on randomized variations around current rates, giving users insight into possible currency movements.
+
+### Popular Conversions
+View the most commonly used currency pairs and their exchange rates. The application displays a summary of the day’s most popular conversions, including times used and current rates.
 
 ### See conversion history:
 After every conversion, the application saves the conversion details to a JSON file, this file stores information such as the base currency, the target currency, the conversion rate, amount and the converted value.
@@ -48,16 +53,19 @@ After every conversion, the application saves the conversion details to a JSON f
 
 ```json
 [
-    {
-        "base_currency": "USD",
-        "target_currency": "EUR",
-        "conversion_rate": 0.92,
-        "amount": 100,
-        "converted_value": 92.0,
-        "timestamp": "2024-11-13T18:54:32+01:00"
-    }
+  {
+    "date": "2024-12-26 17:01:40",
+    "from": "USD",
+    "to": "BAM",
+    "amount": 100.0,
+    "result": 189.0
+  }
 ]
 ```
+
+### Clear History
+Users can easily clear the stored transaction history, ensuring privacy or decluttering the saved data.
+
 ### Error handling:
 The application/project handles errors such as invalid currency codes, missing exchange rate data and calculation issues. Users recieve prompts which lead to correct inputs while ensuring smooth user experience.
 
@@ -65,7 +73,19 @@ The application/project handles errors such as invalid currency codes, missing e
 The menu allows users to select the option which he wants to use in our project with selecting an option using numbers 1 to 5 (as shown below in python).
   
 ```python
-def main_menu():
+while True:
+        clear_screen()
+        print("=== Currency Converter Menu ===")
+        print("1. Convert Currency")
+        print("2. Hourly Predictions")
+        print("3. Daily Predictions")
+        print("4. Popular Conversions")
+        print("5. View Conversion History")
+        print("6. Clear History")
+        print("7. Help")
+        print("8. Exit")
+        
+        choice = input("\nEnter your choice (1-8): ")def main_menu():
     while True:
         print("\n--- Currency Converter Menu ---")
         print("1. Conversion")
@@ -76,3 +96,13 @@ def main_menu():
 
         choice = input("Select an option (1-5): ")
 ```
+### Help Documentation:
+Comprehensive help documentation is included in the application, guiding users through features like currency conversion, predictions, and troubleshooting. The help content is stored in JSON format and displayed upon request.
+
+## How to Use:
+1. Run the application in your preferred programming language (Python, JavaScript, or C#).
+2. Follow the menu options to:
+    - Convert currencies.
+    - View predictions.
+    - Access or clear transaction history.
+    - Access help documentation.
