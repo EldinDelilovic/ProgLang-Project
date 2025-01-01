@@ -70,7 +70,7 @@ Users can easily clear the stored transaction history, ensuring privacy or declu
 The application/project handles errors such as invalid currency codes, missing exchange rate data and calculation issues. Users recieve prompts which lead to correct inputs while ensuring smooth user experience.
 
 ### Menu Example
-The menu allows users to select the option which he wants to use in our project with selecting an option using numbers 1 to 5 (as shown below in python).
+The menu allows users to select the option which he wants to use in our project with selecting an option using numbers 1 to 8 (as shown below in python).
   
 ```python
 while True:
@@ -85,16 +85,8 @@ while True:
         print("7. Help")
         print("8. Exit")
         
-        choice = input("\nEnter your choice (1-8): ")def main_menu():
-    while True:
-        print("\n--- Currency Converter Menu ---")
-        print("1. Conversion")
-        print("2. See Transaction History")
-        print("3. Delete Transaction History")
-        print("4. See Predictions for Tomorrow")
-        print("5. End Program")
+        choice = input("\nEnter your choice (1-8): ")
 
-        choice = input("Select an option (1-5): ")
 ```
 ### Help Documentation:
 Comprehensive help documentation is included in the application, guiding users through features like currency conversion, predictions, and troubleshooting. The help content is stored in JSON format and displayed upon request.
