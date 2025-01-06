@@ -1,0 +1,30 @@
+{
+  "conversion": {
+    "title": "How Currency Conversion Works",
+    "steps": [
+      "1. Select the currency you want to convert FROM (e.g., USD, EUR)",
+      "2. Select the currency you want to convert TO",
+      "3. Enter the amount you want to convert",
+      "4. The system will use current exchange rates to calculate the result"
+    ],
+    "notes": [
+      "\u2022 All conversions are saved in your history",
+      "\u2022 Exchange rates are updated regularly",
+      "\u2022 You can view your conversion history anytime"
+    ],
+    "example": "Example: Converting 100 USD to EUR\n- Enter 'USD' as source currency\n- Enter 'EUR' as target currency\n- Enter '100' as amount\n- System will show result (e.g., 92.00 EUR)"
+  },
+  "predictions": {
+    "title": "Understanding Predictions",
+    "daily": [
+      "Daily predictions show possible rate changes over 24 hours",
+      "Predictions use current rates with market volatility factors",
+      "All major currency pairs are included in daily predictions"
+    ],
+    "hourly": [
+      "Hourly predictions show detailed short-term trends",
+      "Choose between 1, 3, or 6-hour prediction windows",
+      "Includes trend indicators (\u2191/\u2193) and percentage changes"
+    ]
+  }
+}
